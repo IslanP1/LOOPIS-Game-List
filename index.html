@@ -2,52 +2,85 @@
 <html lang="pt - br">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOOPIS GAMES</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
     <header>
-        <h1> LOOPIS GAMES LIST </h1>
+        <p> <span>LOOPIS</span> GAMES LIST </p>
     </header>
+    <div class="card">
+        <div class="cadastro">
+            <form method="post" autocomplete="off">
+                <p id="cadastro">Cadastro</p>
+                <div id="div_nom">
+                    <label for="inome" class="">Nome</label>
+                    <input type="text" name="nome" id="inome" placeholder="Digite o nome do jogo...">
+                </div>
 
-    <form method="post" autocomplete="off">
-        <div>
-            <h2>Cadastro</h2>
-            <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" placeholder="Digite o nome do jogo...">
+                <div id="div_desc">
+                    <label for="idescricao" class="mesm">Descrição</label>
+                    <textarea type="text" name="descricao" id="idescricao" size="40"
+                        placeholder="Digite uma breve descrição sobre o jogo..."></textarea>
+                    <p id="ad">Número máximo de 40 letras.</p>
+                </div>
+
+                <div id="rod_cad">
+                    <label class="marcar">Marcar como favorito?</label>
+                    <div class="radio">
+                        <input id="button_s" type="radio" class="button" name="devweb" volue="Sim">
+                        <label class="opcoes" for="button_s">Sim </label>
+
+                        <input id="button_n" type="radio" class="button" name="devweb" volue="Não">
+                        <label class="opcoes" for="button"> Não </label>
+                    </div>
+                </div>
+
+                <div class="button_save">
+                    <input type="submit" id="save" value="Salvar">
+                    <input type="reset" id="clear" value="Limpar">
+                </div>
+            </form>
         </div>
 
-        <div>
-            <label for="idescricao">Descrição</label>
-            <textarea type="text" name="descricao" id="idescricao" size="40"
-                placeholder="Digite uma breve descrição sobre o jogo..."></textarea>
-                <h5>Número máximo de 40 letras.</h5>
-            </div>
+        <div class="lista">
+            <p id="lista">Lista </p>
+            <div class="scroll">
 
-            <div>
-                <label>Marcar como favorito?</label>
-                <label>
-                    <input type="radio" name="devweb" volue="Sim"> Sim
-                </label>
-                <label>
-                    <input type="radio" name="devweb" volue="Não"> Não
-                </label>
-            </div>
+                <div class="games">
+                    <div class="esquerda">
+                        <img class="img1" src="img/joystick.jpg" alt="imagem do joystick">
+                    </div>
+                    <div class="conteudo">
+                        <p class="titulo">Terraria</p>
+                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
+                            pela
+                            desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
+                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
+                            proceduralmente.
+                        </p>
+                    </div>
+                    <div class="direita">
+                        <img class="img2" src="img/lixo.jpg" alt="lixinho">
+                        <img class="img3" src="img/star.jpg" alt="estrela vazia">
+                    </div>
+                </div>
 
-            <div>
-                <input type="submit" value="Salvar">
-                <input type="reset" value="Limpar">
             </div>
-    </form>
-
-    <div> 
-        <h2>Lista </h2> 
+        </div>
     </div>
-    <footer> 
-        <p>Yohanne da Silva Medeiros, Islan Pereira de Oliveira, Daniel Lima e José Anderson</p>
+
+    <footer>
+        <p>Yohanne da Silva Medeiros, Islan Pereira de Oliveira, Daniel Lima Fernandes e José Anderson Ferraz de Arruda
+        </p>
     </footer>
-    
 </body>
+
 </html>
