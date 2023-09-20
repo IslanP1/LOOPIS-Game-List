@@ -19,7 +19,6 @@ header span {
     line-height: normal;
 }
 
-
 body {
     background-image: url('../img/plano-de-fundo.png');
     background-repeat: no-repeat;
@@ -27,15 +26,13 @@ body {
     background-size: cover;
 }
 
-
 .card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.cadastro,
-.lista {
+.cadastro, .lista {
     background-color: #fff;
     border-radius: 1.125rem;
     box-shadow: 0 .25rem rgba(0, 0, 0, 0.25);
@@ -46,8 +43,7 @@ body {
     transition: 0.5s;
 }
 
-.cadastro:hover,
-.lista:hover {
+.cadastro:hover, .lista:hover {
     transform: scale(1.01);
     transition: 0.5s;
     cursor: pointer;
@@ -58,7 +54,6 @@ body {
     flex-direction: column;
     height: 51.3125rem;
 }
-
 
 .cadastro form #cadastro {
     color: #4C5CFF;
@@ -82,13 +77,13 @@ body {
     margin: 1.875rem 0;
 }
 
-.cadastro form #div_nom {
+.cadastro form #div_nom, #rod_cad {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.cadastro form #div_nom label {
+.cadastro form #div_nom label, #div_desc label {
     color: #4C5CFF;
     text-align: left;
     font-family: 'Inter', sans-serif;
@@ -98,18 +93,6 @@ body {
     line-height: normal;
     margin: 0 1.5rem;
 }
-
-.cadastro form #div_desc label {
-    color: #4C5CFF;
-    text-align: left;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0 1.5rem;
-}
-
 
 .cadastro form #div_nom #inome {
     height: 3.0625rem;
@@ -143,15 +126,6 @@ body {
     margin-left: 1.4rem;
 }
 
-
-
-.cadastro form #rod_cad {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-
 #ad {
     color: #4C5CFF;
     text-align: center;
@@ -161,7 +135,6 @@ body {
     font-weight: 700;
     line-height: normal;
 }
-
 
 .cadastro form #rod_cad .marcar {
     color: #4C5CFF;
@@ -240,7 +213,7 @@ body {
     background: #4181FF;
 }
 
-.lista {
+.lista, .conteudo {
     display: flex;
     flex-direction: column;
 
@@ -272,11 +245,6 @@ body {
 .img1 {
     vertical-align: middle;
     margin: 0.5rem;
-}
-
-.conteudo {
-    display: flex;
-    flex-direction: column;
 }
 
 .titulo {
