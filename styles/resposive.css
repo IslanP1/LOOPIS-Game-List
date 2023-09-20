@@ -7,3 +7,9 @@
         margin-bottom: 3rem;
     }
 }
+
+
+.scroll {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
