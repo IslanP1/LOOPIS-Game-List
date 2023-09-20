@@ -1,3 +1,9 @@
+@media (max-width: 1480px) {
+    footer {
+        margin-top: 0.5rem;
+    }
+}
+
 @media (max-width: 1150px) {
     .card {
         flex-direction: column;
@@ -7,7 +13,6 @@
         margin-bottom: 3rem;
     }
 }
-
 
 .scroll {
     overflow-y: scroll;
