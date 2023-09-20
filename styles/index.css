@@ -263,7 +263,6 @@ body {
 .esquerda {
     width: 3.563375rem;
     flex-shrink: 0;
-    justify-content: space-evenly;
     justify-content: space-around;
     display: flex;
     vertical-align: middle;
@@ -295,20 +294,17 @@ body {
 }
 
 .paragrafo {
-    width: 24rem;
     height: 5.625rem;
     flex-shrink: 0;
     margin-top: 0;
     margin-bottom: 0.9rem;
-}
-
-.paragrafo {
     color: #FFF;
     font-family: Inter;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: justify;
 }
 
 .direita {
@@ -338,7 +334,7 @@ footer {
     justify-content: space-around;
     vertical-align: middle;
     margin-left: -8px;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     background-color: #10086A;
     position: absolute;
     width: 100%;
