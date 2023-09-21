@@ -24,6 +24,7 @@ body {
     background-repeat: no-repeat;
     background-color: lightgray 50%;
     background-size: cover;
+    background-color: #080494;
 }
 
 .card {
@@ -301,7 +302,7 @@ footer {
     justify-content: space-around;
     vertical-align: middle;
     margin-left: -8px;
-    margin-top: 1rem;
+    margin-top: 3rem;
     background-color: #10086A;
     position: absolute;
     width: 100%;
