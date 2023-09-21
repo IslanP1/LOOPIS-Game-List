@@ -92,7 +92,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0 1.5rem;
+    margin: 1rem 1.5rem 0 1.5rem;
 }
 
 .cadastro form #div_nom #inome {
@@ -125,16 +125,7 @@ body {
     resize: none;
     padding: 0.4rem;
     margin-left: 1.4rem;
-}
-
-#ad {
-    color: #4C5CFF;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    margin-bottom: 1.8rem;
 }
 
 .cadastro form #rod_cad .marcar {
@@ -182,7 +173,7 @@ body {
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
-    border: .125rem solid #000;
+    border: 0.12rem solid #000;
     background-color: #F2EDED;
     border-radius: 50%;
     margin-right: 0.5rem;
@@ -212,6 +203,7 @@ body {
     width: 11.5rem;
     border-radius: 1.75rem;
     background: #4181FF;
+    border: 0;
 }
 
 .lista, .conteudo {

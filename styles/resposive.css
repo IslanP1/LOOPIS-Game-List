@@ -27,6 +27,7 @@
     header {
         font-size: 3.5rem;
     }
+
     header span {
         font-size: 3.5rem;
     }
@@ -42,7 +43,7 @@
         padding: 0.6rem;
     }
 
-    .cadastro form #div_nom #inome, #ad {
+    .cadastro form #div_nom #inome {
         font-size: 0.8rem;
     }
 
@@ -79,4 +80,8 @@
 .scroll {
     overflow-y: scroll;
     scroll-behavior: smooth;
+}
+
+.scroll ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
 }
