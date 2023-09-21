@@ -222,10 +222,17 @@ body {
 
 .lista .games {
     border-radius: 1.125rem;
-    background: #10086A;
     height: 8.6875rem;
     flex-shrink: 0;
     margin: 0 1.5rem 1.5rem;
+}
+
+#on {
+    background: #10086A;
+}
+
+#off {
+    background-color: #3C4EFF;
 }
 
 .games {
@@ -278,7 +285,8 @@ body {
 .direita {
     display: flex;
     flex-direction: row;
-    margin-top: 0.2rem
+    margin-top: 0.42rem;
+    margin-right: 0.25rem;
 }
 
 .img2 {
