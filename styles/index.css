@@ -19,14 +19,13 @@ header span {
     line-height: normal;
 }
 
-
 body {
     background-image: url('../img/plano-de-fundo.png');
     background-repeat: no-repeat;
     background-color: lightgray 50%;
     background-size: cover;
+    background-color: #080494;
 }
-
 
 .card {
     display: flex;
@@ -34,8 +33,7 @@ body {
     justify-content: space-evenly;
 }
 
-.cadastro,
-.lista {
+.cadastro, .lista {
     background-color: #fff;
     border-radius: 1.125rem;
     box-shadow: 0 .25rem rgba(0, 0, 0, 0.25);
@@ -46,8 +44,7 @@ body {
     transition: 0.5s;
 }
 
-.cadastro:hover,
-.lista:hover {
+.cadastro:hover, .lista:hover {
     transform: scale(1.01);
     transition: 0.5s;
     cursor: pointer;
@@ -58,7 +55,6 @@ body {
     flex-direction: column;
     height: 51.3125rem;
 }
-
 
 .cadastro form #cadastro {
     color: #4C5CFF;
@@ -82,13 +78,13 @@ body {
     margin: 1.875rem 0;
 }
 
-.cadastro form #div_nom {
+.cadastro form #div_nom, #rod_cad {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.cadastro form #div_nom label {
+.cadastro form #div_nom label, #div_desc label {
     color: #4C5CFF;
     text-align: left;
     font-family: 'Inter', sans-serif;
@@ -96,20 +92,8 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0 1.5rem;
+    margin: 1rem 1.5rem 0 1.5rem;
 }
-
-.cadastro form #div_desc label {
-    color: #4C5CFF;
-    text-align: left;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0 1.5rem;
-}
-
 
 .cadastro form #div_nom #inome {
     height: 3.0625rem;
@@ -141,27 +125,8 @@ body {
     resize: none;
     padding: 0.4rem;
     margin-left: 1.4rem;
+    margin-bottom: 1.8rem;
 }
-
-
-
-.cadastro form #rod_cad {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-
-#ad {
-    color: #4C5CFF;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
 
 .cadastro form #rod_cad .marcar {
     color: #4C5CFF;
@@ -179,7 +144,7 @@ body {
 .cadastro form .radio {
     display: flex;
     flex-direction: row;
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
     padding-top: 0;
     padding-bottom: 1rem;
 }
@@ -194,7 +159,8 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0 1.5rem;
+    align-items: center;
+    margin: 1.5rem 1.5rem 0;
 }
 
 .button {
@@ -207,11 +173,10 @@ body {
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
-    border: .125rem solid #000;
+    border: 0.12rem solid #000;
     background-color: #F2EDED;
     border-radius: 50%;
-    margin-right: .5rem;
-    margin-top: 1.5rem;
+    margin-right: 0.5rem;
     cursor: pointer;
 }
 
@@ -231,31 +196,35 @@ body {
     color: #FFF;
     text-align: center;
     font-family: Inter, sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     width: 11.5rem;
     border-radius: 1.75rem;
     background: #4181FF;
+    border: 0;
 }
 
-.lista {
+.lista, .conteudo {
     display: flex;
     flex-direction: column;
 
 }
 
-.scroll {
-    
-}
-
 .lista .games {
     border-radius: 1.125rem;
-    background: #10086A;
     height: 8.6875rem;
     flex-shrink: 0;
     margin: 0 1.5rem 1.5rem;
+}
+
+#on {
+    background: #10086A;
+}
+
+#off {
+    background-color: #3C4EFF;
 }
 
 .games {
@@ -267,7 +236,6 @@ body {
 .esquerda {
     width: 3.563375rem;
     flex-shrink: 0;
-    justify-content: space-evenly;
     justify-content: space-around;
     display: flex;
     vertical-align: middle;
@@ -277,11 +245,6 @@ body {
 .img1 {
     vertical-align: middle;
     margin: 0.5rem;
-}
-
-.conteudo {
-    display: flex;
-    flex-direction: column;
 }
 
 .titulo {
@@ -299,14 +262,10 @@ body {
 }
 
 .paragrafo {
-    width: 24rem;
     height: 5.625rem;
     flex-shrink: 0;
     margin-top: 0;
     margin-bottom: 0.9rem;
-}
-
-.paragrafo {
     color: #FFF;
     font-family: Inter;
     font-size: 0.75rem;
@@ -318,7 +277,8 @@ body {
 .direita {
     display: flex;
     flex-direction: row;
-    margin-top: 0.2rem
+    margin-top: 0.42rem;
+    margin-right: 0.25rem;
 }
 
 .img2 {
@@ -341,6 +301,12 @@ footer {
     align-items: center;
     justify-content: space-around;
     vertical-align: middle;
+    margin-left: -8px;
+    margin-top: 3rem;
+    background-color: #10086A;
+    position: absolute;
+    width: 100%;
+    
 }
 
 footer p {
@@ -351,4 +317,5 @@ footer p {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 1.5rem;
 }
