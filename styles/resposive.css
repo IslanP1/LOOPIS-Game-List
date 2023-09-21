@@ -9,6 +9,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .cadastro {
         margin-bottom: 3rem;
     }
@@ -16,11 +17,65 @@
 
 @media (max-width: 590px) {
     .cadastro, .lista {
-        width: 22.3125rem;
+        width: 28.3125rem;
         /* height: 33.3125rem; */
     }
+
     .cadastro form #div_desc #idescricao {
-        width: 18.3125rem;
+        width: 24.3125rem;
+    }
+
+    .cadastro form .radio {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 490px) {
+    header {
+        font-size: 3.5rem;
+    }
+    header span {
+        font-size: 3.5rem;
+    }
+    
+    .cadastro, .lista {
+        width: 22.3125rem;
+        height: 44.3125rem;
+    }
+
+    .cadastro form #div_desc #idescricao {
+        width: 17.9531rem;
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .cadastro form #div_nom #inome, #ad {
+        font-size: 0.8rem;
+    }
+
+    .cadastro form #cadastro {
+        font-size: 2.5rem;
+    }
+
+    .cadastro form #div_nom label, #div_desc label, 
+    .cadastro form #rod_cad .marcar,
+    .cadastro form .opcoes {
+        font-size: 1.3rem;
+    }
+
+    .button+label::before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .cadastro form .radio {
+        margin: 0 3rem;
+        justify-content: space-evenly;
+    }
+
+    .button_save input {
+        font-size: 1.2rem;
+        width: 8.7rem;
     }
 }
 
