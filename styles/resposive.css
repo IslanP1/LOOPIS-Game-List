@@ -14,6 +14,16 @@
     }
 }
 
+@media (max-width: 590px) {
+    .cadastro, .lista {
+        width: 22.3125rem;
+        /* height: 33.3125rem; */
+    }
+    .cadastro form #idescricao {
+        width: 18.3125rem; /* a classe não está aceitando */
+    }
+}
+
 .scroll {
     overflow-y: scroll;
     scroll-behavior: smooth;
