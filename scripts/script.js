@@ -4,22 +4,25 @@ let listagem = document.getElementsByClassName("scroll")[0];
 function coletarDados() {
     let nome = document.getElementById("inome").value;
     let descricao = document.getElementById("idescricao").value;
+    let favorito = favoritarJogos();
 
     let objeto = {
         nome: nome,
-        descricao: descricao
+        descricao: descricao,
+        favorito: favorito
     }
 
     arrayObjetos.push(objeto);
+    console.log(arrayObjetos);
     renderizarJogos();
 };
 
 function renderizarJogos() {
     let elementosHTML = "";
-
+    
     arrayObjetos.forEach((valor, index) => {
         const elemento = `
-            <div id="on" class="games">
+            <div id="${valor.favorito}" class="games">
                 <div class="esquerda">
                     <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
                 </div>
@@ -33,7 +36,6 @@ function renderizarJogos() {
                 </div>
             </div>
         `;
-
         elementosHTML += elemento;
     });
 
@@ -43,4 +45,9 @@ function renderizarJogos() {
 function removerJogos(index) {
     arrayObjetos.splice(index, 1);
     renderizarJogos();
+};
+
+function favoritarJogos() {
+    let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
+    return valueCheckButton.value;
 };
