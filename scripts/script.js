@@ -14,7 +14,6 @@ function coletarDados() {
     renderizarJogos();
 };
 
-
 function renderizarJogos() {
     let elementosHTML = "";
 
@@ -29,7 +28,7 @@ function renderizarJogos() {
                     <p class="paragrafo">${valor.descricao}</p>
                 </div>
                 <div class="direita">
-                    <img class="img2" src="img/trash 1.svg" alt="lixinho">
+                    <a onclick="removerJogos(${index})"><img class="img2" src="img/trash 1.svg" alt="lixinho"></a>
                     <img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">
                 </div>
             </div>
@@ -39,4 +38,9 @@ function renderizarJogos() {
     });
 
     listagem.innerHTML = elementosHTML;
-}
+};
+
+function removerJogos(index) {
+    arrayObjetos.splice(index, 1);
+    renderizarJogos();
+};
