@@ -105,3 +105,9 @@ function alerta(status, title, text) {
     });
 }
 
+function limparCampos() {
+    document.getElementById('inome').value = "";
+    document.getElementById('idescricao').value = "";
+    let radioButtons = document.querySelectorAll('input[type=radio][name=devweb]:checked');
+    radioButtons.forEach((selecionado) => selecionado.checked = false);
+};
