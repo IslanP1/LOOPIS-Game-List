@@ -32,7 +32,9 @@ function renderizarJogos() {
                 </div>
                 <div class="direita">
                     <a onclick="removerJogos(${index})"><img class="img2" src="img/trash 1.svg" alt="lixinho"></a>
-                    <img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">
+                    ${valor.favorito === "on" ?
+                    `<img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">` :
+                    `<img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">`}
                 </div>
             </div>
         `;
@@ -51,3 +53,4 @@ function favoritarJogos() {
     let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
     return valueCheckButton.value;
 };
+
