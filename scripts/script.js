@@ -12,9 +12,25 @@ function coletarDados() {
         favorito: favorito
     }
 
-    arrayObjetos.push(objeto);
+    if (nomesIguais(nome)){
+        alerta("error", "Oops...", "Jogo já adicionado, adicione outro!");
+    } else if (nome === ""){
+        alerta("error", "Oops...", "Adicione um nome!");
+    } else {
+        arrayObjetos.push(objeto);
+        alerta("success", "Boa...", "Jogo adicionado com sucesso!");
+    }
+
     console.log(arrayObjetos);
     renderizarJogos();
+}
+
+function alerta(status, title, text) {
+    Swal.fire({
+        icon: `${status}`,
+        title: `${title}`,
+        text: `${text}`,
+      })
 }
 
 function renderizarJogos() {
@@ -42,7 +58,7 @@ function renderizarJogos() {
         `;
         valor.favorito === "on" ? jogosFavoritos.push(elemento) : jogosNaoFavoritos.push(elemento);
         elementosHTML += elemento;
-        
+
     })
 
     let ordenado = jogosFavoritos.concat(jogosNaoFavoritos).join('');
@@ -56,6 +72,9 @@ function removerJogos(index) {
 
 function favoritarJogos() {
     let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
+    if (valueCheckButton === null) {
+        return "off";
+    }
     return valueCheckButton.value;
 }
 
@@ -66,4 +85,14 @@ function favoritarPelaEstrela(index) {
         arrayObjetos[index].favorito = "on";
     }
     renderizarJogos();
+}
+
+function nomesIguais(nome) {
+    let verificador = false;
+    arrayObjetos.forEach((valor) => {
+        if (valor.nome.toLowerCase() === nome.toLowerCase()) {
+            verificador = true;
+        } 
+    })
+    return verificador;
 }
