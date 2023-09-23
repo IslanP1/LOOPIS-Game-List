@@ -21,6 +21,10 @@
     .lista .games, .paragrafo {
         height: auto;
     }
+
+    .conteudo {
+        max-width: 70%;
+    }
 }
 
 @media (max-width: 490px) {
@@ -75,13 +79,8 @@
         font-size: 1.2rem;
         width: 8.7rem;
     }
-}
 
-.scroll {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-.scroll ::-webkit-scrollbar-thumb {
-    border-radius: 50px;
+    .conteudo {
+        max-width: 60%;
+    }
 }
