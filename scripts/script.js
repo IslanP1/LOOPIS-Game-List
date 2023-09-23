@@ -1,6 +1,9 @@
 let arrayObjetos = [];
 let listagem = document.getElementsByClassName("scroll")[0];
 
+arrayObjetos = JSON.parse(localStorage.getItem("arrayObjetos")) || [];
+renderizarJogos();
+
 function coletarDados() {
     let nome = document.getElementById("inome").value;
     let descricao = document.getElementById("idescricao").value;
@@ -18,26 +21,19 @@ function coletarDados() {
         alerta("error", "Oops...", "Adicione um nome!");
     } else {
         arrayObjetos.push(objeto);
+        localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
+        limparCampos();
         alerta("success", "Boa...", "Jogo adicionado com sucesso!");
     }
 
-    console.log(arrayObjetos);
     renderizarJogos();
-}
-
-function alerta(status, title, text) {
-    Swal.fire({
-        icon: `${status}`,
-        title: `${title}`,
-        text: `${text}`,
-      })
 }
 
 function renderizarJogos() {
     let elementosHTML = "";
     let jogosFavoritos = [];
     let jogosNaoFavoritos = [];
-    
+
     arrayObjetos.forEach((valor, index) => {
         const elemento = `
             <div id="${valor.favorito}" class="games">
@@ -67,8 +63,10 @@ function renderizarJogos() {
 
 function removerJogos(index) {
     arrayObjetos.splice(index, 1);
+    localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
     renderizarJogos();
 }
+
 
 function favoritarJogos() {
     let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
@@ -84,6 +82,8 @@ function favoritarPelaEstrela(index) {
     } else {
         arrayObjetos[index].favorito = "on";
     }
+
+    localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
     renderizarJogos();
 }
 
@@ -96,3 +96,12 @@ function nomesIguais(nome) {
     })
     return verificador;
 }
+
+function alerta(status, title, text) {
+    Swal.fire({
+        icon: `${status}`,
+        title: `${title}`,
+        text: `${text}`,
+    });
+}
+
