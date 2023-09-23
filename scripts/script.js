@@ -35,8 +35,8 @@ function renderizarJogos() {
                 <div class="direita">
                     <a onclick="removerJogos(${index})"><img class="img2" src="img/trash 1.svg" alt="lixinho"></a>
                     ${valor.favorito === "on" ?
-                    `<img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">`:
-                    `<img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">`}
+                    `<a onclick="favoritarPelaEstrela(${index})"><img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia"></a>`:
+                    `<a onclick="favoritarPelaEstrela(${index})"><img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia"></a>`}
                 </div>
             </div>
         `;
@@ -57,4 +57,13 @@ function removerJogos(index) {
 function favoritarJogos() {
     let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
     return valueCheckButton.value;
+}
+
+function favoritarPelaEstrela(index) {
+    if (arrayObjetos[index].favorito === "on") {
+        arrayObjetos[index].favorito = "off";
+    } else {
+        arrayObjetos[index].favorito = "on";
+    }
+    renderizarJogos();
 }
