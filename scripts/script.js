@@ -40,6 +40,7 @@ function renderizarJogos() {
     let jogosFavoritos = [];
     let jogosNaoFavoritos = [];
     
+    arrayObjetos.sort((antes, depois) => antes.nome.localeCompare(depois.nome));
 
     arrayObjetos.forEach((valor, index) => {
         const elemento = `
@@ -66,9 +67,7 @@ function renderizarJogos() {
 
     let ordenado = jogosFavoritos.concat(jogosNaoFavoritos).join('');
     listagem.innerHTML = ordenado;
-
 }
-
 
 function removerJogos(index) {
     arrayObjetos.splice(index, 1);
@@ -107,14 +106,6 @@ function nomesIguais(nome) {
     return verificador;
 }
 
-function alerta(status, title, text) {
-    Swal.fire({
-        icon: `${status}`,
-        title: `${title}`,
-        text: `${text}`,
-    });
-}
-
 function limparCampos() {
     document.getElementById('inome').value = "";
     document.getElementById('idescricao').value = "";
@@ -131,4 +122,12 @@ function adicionarBloco() {
     } else {
         tituloSemConteudo.style.display = "none";
     }
+}
+
+function alerta(status, title, text) {
+    Swal.fire({
+        icon: `${status}`,
+        title: `${title}`,
+        text: `${text}`,
+    });
 }
