@@ -4,7 +4,7 @@ let tituloSemConteudo = document.getElementById("titulo-sem-conteudo");
 
 arrayObjetos = JSON.parse(localStorage.getItem("arrayObjetos")) || [];
 
-adicionarBloco();
+textoSemJogos();
 renderizarJogos();
 
 function coletarDados() {
@@ -25,9 +25,8 @@ function coletarDados() {
     } else {
         arrayObjetos.push(objeto);
         localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
-        console.log(arrayObjetos.length);
         
-        adicionarBloco();
+        textoSemJogos();
         limparCampos();
         alerta("success", "Boa...", "Jogo adicionado com sucesso!");
     }
@@ -60,9 +59,9 @@ function renderizarJogos() {
                 </div>
             </div>
         `;
+
         valor.favorito === "on" ? jogosFavoritos.push(elemento) : jogosNaoFavoritos.push(elemento);
         elementosHTML += elemento;
-
     })
 
     let ordenado = jogosFavoritos.concat(jogosNaoFavoritos).join('');
@@ -72,10 +71,10 @@ function renderizarJogos() {
 function removerJogos(index) {
     arrayObjetos.splice(index, 1);
     localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
-    adicionarBloco();
+    alerta("success", "Deletado", "Jogo deletado com sucesso!");
     renderizarJogos();
+    textoSemJogos();
 }
-
 
 function favoritarJogos() {
     let valueCheckButton = document.querySelector("input[type=radio][name=devweb]:checked");
@@ -88,8 +87,10 @@ function favoritarJogos() {
 function favoritarPelaEstrela(index) {
     if (arrayObjetos[index].favorito === "on") {
         arrayObjetos[index].favorito = "off";
+        alerta("warning", "Não favoritado", "Jogo marcado como não favorito!");
     } else {
         arrayObjetos[index].favorito = "on";
+        alerta("success", "Favoritado", "Jogo marcado como favorito!");
     }
 
     localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
@@ -102,7 +103,7 @@ function nomesIguais(nome) {
         if (valor.nome.toLowerCase() === nome.toLowerCase()) {
             verificador = true;
         } 
-    })
+    });
     return verificador;
 }
 
@@ -111,9 +112,9 @@ function limparCampos() {
     document.getElementById('idescricao').value = "";
     let radioButtons = document.querySelectorAll('input[type=radio][name=devweb]:checked');
     radioButtons.forEach((selecionado) => selecionado.checked = false);
-};
+}
 
-function adicionarBloco() {
+function textoSemJogos() {
     if (arrayObjetos.length === 0) {
         const elemento = `<h1>Não há jogos cadastrados</h1>`;
         tituloSemConteudo.innerHTML = elemento;
