@@ -36,16 +36,16 @@
                 <div id="rod_cad">
                     <label class="marcar">Marcar como favorito?</label>
                     <div class="radio">
-                        <input id="button_s" type="radio" class="button" name="devweb" volue="Sim">
+                        <input id="button_s" type="radio" class="button" name="devweb" value="on">
                         <label class="opcoes" for="button_s">Sim </label>
 
-                        <input id="button_n" type="radio" class="button" name="devweb" volue="Não">
+                        <input id="button_n" type="radio" class="button" name="devweb" value="off">
                         <label class="opcoes" for="button_n"> Não </label>
                     </div>
                 </div>
 
                 <div class="button_save">
-                    <input type="submit" id="save" value="Salvar">
+                    <input type="button" id="save" value="Salvar" onclick="coletarDados()">
                     <input type="reset" id="clear" value="Limpar">
                 </div>
             </form>
@@ -53,143 +53,25 @@
 
         <div class="lista">
             <p id="lista">Lista </p>
-            <div class="scroll">
 
-                <div id="on" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
+            <div id="titulo-sem-conteudo">
                 
-                <!-- Teste de responsividade -->
-                <div id="on" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-
-                <div id="on" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-outline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-
-                <div id="off" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-
-                <div id="off" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-
-                <div id="off" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-
-                <div id="off" class="games">
-                    <div class="esquerda">
-                        <img class="img1" src="img/joystick-svgrepo-com 1.svg" alt="imagem do joystick">
-                    </div>
-                    <div class="conteudo">
-                        <p class="titulo">Terraria</p>
-                        <p class="paragrafo">Terraria é um jogo eletrônico RPG de ação-aventura independente produzido
-                            pela desenvolvedora de jogos Re-Logic. Possui como características a exploração, artesanato,
-                            construção de estruturas e combate a monstros perigosos em um mundo 2D gerado
-                            proceduralmente.
-                        </p>
-                    </div>
-                    <div class="direita">
-                        <img class="img2" src="img/trash 1.svg" alt="lixinho">
-                        <img class="img3" src="img/star-offtline-svgrepo-com 1.svg" alt="estrela vazia">
-                    </div>
-                </div>
-                <!-- endteste -->
+            </div>
+            
+            <div class="scroll">
 
             </div>
         </div>
     </div>
 
     <footer>
-        <p><strong>Desenvolverdores:</strong> Daniel Lima Fernandes - Islan Pereira de Oliveira - José Anderson Ferraz de Arruda - Yohanne da Silva Medeiros</p>
+        <p><strong>Desenvolverdores:</strong> Daniel Lima Fernandes - Islan Pereira de Oliveira - José Anderson Ferraz
+            de Arruda - Yohanne da Silva Medeiros</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>

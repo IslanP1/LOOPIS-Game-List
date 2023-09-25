@@ -47,7 +47,6 @@ body {
 .cadastro:hover, .lista:hover {
     transform: scale(1.01);
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .cadastro form {
@@ -204,19 +203,52 @@ body {
     border-radius: 1.75rem;
     background: #4181FF;
     border: 0;
+    cursor: pointer;
 }
 
-.lista, .conteudo {
+.lista {
     display: flex;
     flex-direction: column;
-
 }
 
-.lista .games {
+.scroll {
+    width: 100%;
+    height: 78%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scroll ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+}
+
+
+#titulo-sem-conteudo h1 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.30);
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.games {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    vertical-align: middle;
     border-radius: 1.125rem;
-    height: 8.6875rem;
+    min-height: 8.6875rem;
+    height: auto;
     flex-shrink: 0;
     margin: 0 1.5rem 1.5rem;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    max-width: 76%; 
 }
 
 #on {
@@ -225,12 +257,6 @@ body {
 
 #off {
     background-color: #3C4EFF;
-}
-
-.games {
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
 }
 
 .esquerda {
@@ -248,13 +274,12 @@ body {
 }
 
 .titulo {
+    overflow-wrap: break-word;
     color: #FFF;
     font-family: Inter;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    width: 5.875rem;
     margin-top: 0.4rem;
     margin-bottom: 0;
     margin-left: 0;
@@ -262,13 +287,12 @@ body {
 }
 
 .paragrafo {
-    height: 5.625rem;
-    flex-shrink: 0;
+    overflow-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0.9rem;
     color: #FFF;
     font-family: Inter;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -279,12 +303,14 @@ body {
     flex-direction: row;
     margin-top: 0.42rem;
     margin-right: 0.25rem;
+    margin-left: auto;
 }
 
 .img2 {
     width: 1.375rem;
     height: 1.5625rem;
     margin-top: 0.3rem;
+    cursor: pointer;
 }
 
 .img3 {
@@ -293,6 +319,7 @@ body {
     flex-shrink: 0;
     margin: 0.2rem;
     margin-left: 0.4rem;
+    cursor: pointer;
 }
 
 footer {
@@ -302,11 +329,10 @@ footer {
     justify-content: space-around;
     vertical-align: middle;
     margin-left: -8px;
-    margin-top: 3rem;
+    margin-top: 5rem;
     background-color: #10086A;
     position: absolute;
     width: 100%;
-    
 }
 
 footer p {
