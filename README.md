@@ -18,8 +18,13 @@ O LOOPIS-Game-List é um projeto desenvolvido como parte do processo de admissã
 
 1. Clone este repositório:
 
+Via link http:
 ```bash
 git clone https://github.com/IslanP1/LOOPIS-Game-List.git
+```
+Via chave ssh:
+```bash
+git@github.com:IslanP1/LOOPIS-Game-List.git
 ```
 
 2. Abra o arquivo index.html em seu navegador.
@@ -30,7 +35,7 @@ git clone https://github.com/IslanP1/LOOPIS-Game-List.git
 
 - **Daniel Lima**,
 - **Islan Pereira**,
-- **José Anderson Ferraz**,
+- **José Anderson Arruda**,
 - **Yohanne Medeiros**.
 
 Obrigado por verificar o LOOPIS-Game-List! Esperamos que você goste de usá-lo tanto quanto nós gostamos de desenvolvê-lo. Se tiver alguma dúvida ou sugestão, não hesite em entrar em contato conosco.
