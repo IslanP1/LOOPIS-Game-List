@@ -274,6 +274,7 @@ body {
 }
 
 .titulo {
+    white-space: nowrap;
     color: #FFF;
     font-family: Inter;
     font-size: 1.5rem;
