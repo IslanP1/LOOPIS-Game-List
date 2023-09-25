@@ -39,7 +39,7 @@ function renderizarJogos() {
     let jogosFavoritos = [];
     let jogosNaoFavoritos = [];
     
-    arrayObjetos.sort((antes, depois) => antes.nome.localeCompare(depois.nome));
+    //arrayObjetos.sort((antes, depois) => antes.nome.localeCompare(depois.nome));
 
     arrayObjetos.forEach((valor, index) => {
         const elemento = `
